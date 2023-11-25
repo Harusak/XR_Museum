@@ -10,11 +10,15 @@
     <!-- シーン生成、AR.js呼び出し -->
     <a-scene embedded arjs>
       <!-- マーカートラッキング設定 -->
-      <!-- hiroマーカーに反応し、タグ内の3dモデルを表示 -->
       <a-marker preset="hiro">
         <!-- 直方体呼び出し -->
-        <a-box position="0 0 0" scale="1 1 1" color="red"></a-box
-      ></a-marker>
+        <a-box position="0 0.5 0" scale="0.1 0.1 0.1" color="red" 
+               animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-box>
+
+        <!-- 球体呼び出し -->
+        <a-sphere position="0 0.5 -0.5" radius="0.1" color="blue"
+                  animation="property: rotation; to: 0 360 0; loop: true; dur: 5000"></a-sphere>
+      </a-marker>
     </a-scene>
   </body>
 </html>
